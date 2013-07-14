@@ -1,0 +1,31 @@
+doctype 5
+
+html
+  head
+    link(rel='stylesheet', href='/stylesheets/normalize.css')
+    link(rel='stylesheet', href='/stylesheets/paste.css')
+    link(rel='stylesheet', href='/stylesheets/rainbow/themes/github.css')
+    title Paste #{_id} (#{langpretty}) at magicpaste
+  body
+    .content 
+      pre
+        code(data-language="#{lang}") #{pastedata}
+    .footer
+      #expand
+        span.entypo-up-open &nbsp;
+      #metadata
+        ul
+          li Author: #{author}
+          li Description: #{description}
+          li Date posted: #{date}
+          li Language: #{lang} / #{langpretty}
+        ul
+          li
+            a(href="/") New paste
+          li
+            a(href="/about") About
+    script(src="/javascripts/jquery-1.9.0.min.js")
+    script(src="/javascripts/rainbow/rainbow.min.js")
+    script(src="/javascripts/rainbow/language/generic.js")
+    script(src="/javascripts/rainbow/language/#{lang}.js")
+    script(src="/javascripts/index.js")

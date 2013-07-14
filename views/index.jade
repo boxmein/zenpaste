@@ -1,0 +1,38 @@
+extends layout
+
+block content
+  h1 ZenPaste
+  p
+    i A pastebin that highlights stuff!
+  form#paster(method="POST", action="/putpaste")
+    label(for="author") Author: 
+    input(type="text", name="author", value="anon")
+    br
+    label(for="desc") Description: 
+    input(type="text", name="desc")
+    br
+    label(for="language") Language: 
+    select(name="language")
+        option(value="c") C
+        option(value="coffeescript") CoffeeScript
+        option(value="csharp") C#
+        option(value="css") CSS
+        option(value="d") D
+        option(value="haskell") Haskell
+        option(value="html") HTML
+        option(value="java") Java
+        option(value="javascript") Javascript
+        option(value="lua") Lua
+        option(value="php") PHP
+        option(value="python") Python
+        option(value="r") R
+        option(value="ruby") Ruby
+        option(value="scheme") Scheme
+        option(value="shell") Shell
+    input(type="submit", value="Paste!")
+    - var date = new Date().getTime();
+    input(type="hidden", name="date", value="#{date}")
+    hr
+    textarea(name="paste")
+
+      
