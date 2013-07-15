@@ -5,8 +5,10 @@ html
     link(rel='stylesheet', href='/stylesheets/normalize.css')
     link(rel='stylesheet', href='/stylesheets/paste.css')
     link(rel='stylesheet', href='/stylesheets/rainbow/themes/github.css')
-    title Paste #{_id} (#{langpretty}) at magicpaste
+    title Paste #{_id} (#{langpretty}) / ZenPaste
   body
+    .header
+      h2 Paste #{_id} (#{lang}/#{langpretty}) at zenpaste
     .content 
       pre
         code(data-language="#{lang}") #{pastedata}
