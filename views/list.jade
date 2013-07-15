@@ -1,5 +1,21 @@
-extends layout
-
-block content
-  each paste in keys
-    a(href="/paste/"+ paste)#{paste}
+html
+  head
+    link(rel='stylesheet', href='/stylesheets/normalize.css')
+    link(rel='stylesheet', href='/stylesheets/list.css')
+    title Paste listing / ZenPaste
+  body
+    h1 List of pastes
+    i
+      a(href="/") New 
+      /
+      a(href="/about") About 
+    ol 
+      each paste in pastes 
+        li 
+          a.id(href="/paste/#{paste._id}") #{paste._id} 
+          span / Date posted: 
+            b #{paste.date} 
+          span / Language: 
+            b #{paste.langpretty} 
+          br
+          span.desc Description: #{paste.description} 

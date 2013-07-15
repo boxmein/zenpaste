@@ -10,7 +10,11 @@ exports.index = function(req, res){
 };
 
 exports.list = function (req, res) {
-  res.render('index', {})
+  pastes.find({}, function (err, docs) {
+    if (err || docs == []) 
+      return res.send("Database error: " + err);
+    res.render('list', {pastes: docs});
+  })
 };
 
 exports.about = function (req, res) {
