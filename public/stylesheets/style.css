@@ -14,32 +14,7 @@ hr {
   border: none;
   border-top: 1px solid rgba(0,0,0,0.1);
 }
-#paster input[type="text"] {
-  width: 100%;
-  padding: 2px;
-  margin: 3px;
-}
-textarea {
-  padding: 5px;
-  margin: 3px;
-  width: 100%; 
-  min-height: 200px;
-  resize: vertical;
-}
-#paster select {
-  width: 30%;
-  background-color: #EEE;
-  border: 1px solid #CCC;
-  padding: 3px;
-  margin: 3px;
-}
-#paster input[type="submit"] {
-  width: 30%;
-  background-color: #EEE;
-  border: 1px solid #CCC;
-  margin: 3px;
-  padding: 3px;
-}
+
 @import url(http://weloveiconfonts.com/api/?family=entypo);
 
 /* entypo */

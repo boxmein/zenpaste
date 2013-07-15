@@ -1,0 +1,42 @@
+#paster label {
+  float: left; 
+  width: 80px;
+  text-align: right;
+  clear: both;
+  color: #999;
+  margin: 0;
+  font-weight: normal;
+  margin-top: 7px;
+}
+#paster input {
+  margin-left: 90px;
+
+}
+#paster select {
+  width: 300px;
+  background-color: #EEE;
+  border: 1px solid #CCC;
+  padding: 3px;
+  margin: 3px;
+}
+#paster input[type="submit"] {
+  width: 300px;
+  background-color: #EEE;
+  border: 1px solid #CCC;
+  margin: 3px;
+  padding: 3px;
+}
+#paster input[type="text"] {
+  padding: 2px;
+  margin: 3px;
+  width: 600px;
+}
+
+textarea {
+  margin-left: 90px;
+  padding: 5px;
+  margin: 3px;
+  width: 600px; 
+  min-height: 200px;
+  resize: vertical;
+}
