@@ -1,9 +1,13 @@
-extends layout
-
-block content
+!!!
+html
+  head
+    title ZenPaste / a pastebin that looks neat !
+    link(rel='stylesheet', href='/stylesheets/normalize.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/paster.css')
   h1 ZenPaste
   p
-    i A pastebin that highlights stuff!
+    i A pastebin that looks neat !
   form#paster(method="POST", action="/putpaste")
     label(for="author") Author: 
     input(type="text", name="author", value="anon")
@@ -33,6 +37,7 @@ block content
     - var date = new Date().getTime();
     input(type="hidden", name="date", value="#{date}")
     hr
+    label(for="paste") Content: 
     textarea(name="paste")
 
       
